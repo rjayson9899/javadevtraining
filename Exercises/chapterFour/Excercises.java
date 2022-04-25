@@ -5,7 +5,7 @@
 * Chapter 4 of the Java programming guide
 */
 
-package chapterFour;
+package Exercises.chapterFour;
 
 import java.util.Scanner;
 import java.text.NumberFormat;
