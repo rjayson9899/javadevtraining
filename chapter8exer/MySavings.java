@@ -99,7 +99,7 @@ public class MySavings {
 
 
         }while(choice != 0);
-
-
+        
+        input.close();
     }
 }
