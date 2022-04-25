@@ -9,7 +9,7 @@ import java.text.NumberFormat;
 import java.util.Random;
 import java.lang.Math;
 
-public class ChapterFiveExercies {
+public class ChapterFiveExercise {
 
     //This program gets the wave size.
     public static void runReviewSurfUp(){
@@ -107,7 +107,7 @@ public class ChapterFiveExercies {
     }
 
     // this program judges the users package if it is eligible for transport.
-    public static void runExercisetwo(){
+    public static void runExerciseTwo(){
 
         double weight, width, height, length, total;
 
@@ -174,6 +174,7 @@ public class ChapterFiveExercies {
         }
       }
 
+    //this program is checks if the car model is defective.
     public static void runExerciseFour(){
 
         int carModel;
@@ -214,6 +215,7 @@ public class ChapterFiveExercies {
        
     }  
 
+    // this program calculates for the percentage and the corresponding letter grade.
     public static void runExerciseFive(){
         double percent;
 
@@ -239,6 +241,7 @@ public class ChapterFiveExercies {
         }
     }
 
+    //this program randomly generates 2 numbers and operation and checks the user's answer.
     public static void runExerciseSix(){
 
         int input,randsone,randstwo,randstotal = 0,op;
@@ -281,6 +284,7 @@ public class ChapterFiveExercies {
 
     }
 
+    //this program is a guessing game.
     public static void runExerciseNine(){
         
         int player;
@@ -296,22 +300,14 @@ public class ChapterFiveExercies {
         System.out.println("Computer's Number: " + comp);
         System.out.println("Player's number: " + player);
         if (player == comp){
-            System.out.println("You Wwon!");
+            System.out.println("You Won!");
         }
         else {
             System.out.println("Better luck next time. ");
         }
     }
 
-    public static void runExerciseThirteen(){
-
-    }
-
-    public static void runExerciseFourteen(){
-
-
-    }
-
+    //this program calculates for the half-life of a bio-material.
     public static void runExerciseFifthteen(){
         int choice;
         double initial,finalOne,timeOne,constant,total;
@@ -365,6 +361,7 @@ public class ChapterFiveExercies {
         userIn.close();
     }
 
+    //this program calculates for the trigonometric functions of the user inputted degree
     public static void runExerciseSixteen(){
         double angle;
         double cos,sin,tan;
@@ -384,7 +381,7 @@ public class ChapterFiveExercies {
         System.out.println("Arctan: " + tan);
     } 
 
-
+    // this program is similar to the previous one except using inverse functions.
     public static void runExerciseSeventeen(){
         double angle;
         double asin,acos,atan;
@@ -405,6 +402,76 @@ public class ChapterFiveExercies {
     }
 
     public static void main(String[] args){
+        int choice;
+
+        Scanner userIn = new Scanner(System.in);
+
+        System.out.println("Please choose what exercise: ");
+        System.out.println("1. Surf Up ");
+        System.out.println("2. Stages ");
+        System.out.println("3. Exercise One ");
+        System.out.println("4. Exercise Two ");
+        System.out.println("5. Exercise Three ");
+        System.out.println("6. Exercise Four ");
+        System.out.println("7. Exercise Five ");
+        System.out.println("8. Exercise Six");
+        System.out.println("9. Exercise Nine ");
+        System.out.println("10. Exercise Fifthteen ");
+        System.out.println("11. Exercise Sixteen ");
+        System.out.println("12. Exercise Seventeen" );
+        choice = userIn.nextInt();
+
+        switch(choice){
+
+            case 1:
+            runReviewSurfUp();
+            break;
+
+            case 2:
+            runReviewStages();
+            break;
+
+            case 3:
+            runExerciseOne();
+            break;
+
+            case 4:
+            runExerciseTwo();
+            break;
+
+            case 5:
+            runExerciseThree();
+            break;
+
+            case 6:
+            runExerciseFour();
+            break;
+
+            case 7:
+            runExerciseFive();
+            break;
+
+            case 8:
+            runExerciseSix();
+            break;
+
+            case 9:
+            runExerciseNine();
+            break;
+
+            case 10:
+            runExerciseFifthteen();
+            break;
+
+            case 11:
+            runExerciseSixteen();
+            break;
+
+            case 12:
+            runExerciseSeventeen();
+            break;
+
+        }
         runExerciseFifthteen();
     }
 }

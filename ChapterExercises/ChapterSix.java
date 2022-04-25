@@ -4,14 +4,11 @@
  exercise and gain more experience with coding in Java.
  Most of the codes in here are 
  */
-package chapterthree;
 
 import java.util.Scanner;
-
 public class ChapterSix {
-    
-    // The purpose of this program is to enable the user to 
-    
+
+    //this program asks the user for 2 numbers and will only continue as long as the answer is correct.
     public static void runPrompter(){
         int inOne,inTwo,comp;
        
@@ -38,6 +35,7 @@ public class ChapterSix {
        while( comp < inOne && comp > inTwo );
     }
     
+    //this program just shows even number from 1-20.
     public static void runEven(){
         int newValue = 0;
         
@@ -47,6 +45,7 @@ public class ChapterSix {
         }
     }
     
+    //this program prompts user for a number, counts from 1 up to the number and then adds the sum.
     public static void runNumberSum(){
         int user, sum = 0;
         int counter = 0;
@@ -64,20 +63,60 @@ public class ChapterSix {
         
     }
     
+    //this program prompts user for scores and only shows those above 70%
     public static void runPercentPassing(){
-        int score;
+        Double number,score = 0.0;
+        Double counter = 0.0;
+        double percentage;
         
         Scanner userIn = new Scanner(System.in);
         
-        System.out.println("Enter the scores that you have.");
-        score = userIn.nextInt();
+        System.out.println("Enter how scores you are calculating for.");
+        number = userIn.nextDouble();
         
-        for (int x = 0; x < score; x++){
-            
+        for (int x = 0; x < number; x++){
+            System.out.println("Enter the scores: ");
+            score = userIn.nextDouble();
+
+            if (score >= 70){
+                counter += 1;
+            }
         }
+
+        percentage = (counter/number)*100;
+        System.out.println("You have " + percentage + " scores that are over 70%. ");
     }
     public static void main(String[] args){
-       runNumberSum();
+        int choice;
+
+        Scanner userIn = new Scanner(System.in);
+
+        System.out.println("Please choose what exercise: ");
+        System.out.println("1. Exercise Seven");
+        System.out.println("2. Exercise Eleven");
+        System.out.println("3. Exercise Thirteen");
+       // System.out.println("4. Exercise Sixteen");
+        choice = userIn.nextInt();
+
+        switch(choice){
+
+            case 1:
+            runPrompter();
+            break;
+
+            case 2:
+            runEven();
+            break;
+
+            case 3:
+            runPercentPassing();
+            break;
+
+         /*   case 4:
+            runExerciseEleven();
+            break;
+            */
+        }
     }
 }
 

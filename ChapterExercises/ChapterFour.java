@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Chapterfourpractice {
+public class ChapterFour {
 
     public static void ChapterfourEone(){
 
