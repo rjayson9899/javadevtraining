@@ -5,7 +5,7 @@
 * found in Chapter 5 of the Java Programming Guide
 */
 
-package chapterFive;
+package Exercises.chapterFive;
 
 import java.util.Scanner;
 import java.util.Random;
