@@ -84,10 +84,30 @@ public class ChapterSix {
         }
 
         percentage = (counter/number)*100;
-        System.out.println("You have " + percentage + " scores that are over 70%. ");
+        System.out.println("You have " + percentage + "% scores that are over 70%. ");
+    }
+
+    public static void runFactorial(){
+        double asd;
+        double total = 0, counter;
+
+        Scanner userIn = new Scanner(System.in);
+
+        System.out.println("Enter a number: ");
+        asd = userIn.nextDouble();
+        total = asd;
+        for(double x = asd; x > 1; x--){
+            counter = x - 1;
+            System.out.println(counter);
+
+            total = total*counter;
+            System.out.println(total);
+        }
+
     }
     public static void main(String[] args){
-        int choice;
+        runFactorial();
+        /*   int choice;
 
         Scanner userIn = new Scanner(System.in);
 
@@ -112,11 +132,13 @@ public class ChapterSix {
             runPercentPassing();
             break;
 
-         /*   case 4:
+            case 4:
             runExerciseEleven();
             break;
-            */
+            
         }
+        */
     }
+    
 }
 
