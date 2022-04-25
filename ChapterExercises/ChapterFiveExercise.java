@@ -303,15 +303,68 @@ public class ChapterFiveExercies {
         }
     }
 
- /*   public static void runExerciseFifthteen(){
-        int initial;
-        
+    public static void runExerciseThirteen(){
+
+    }
+
+    public static void runExerciseFourteen(){
+
+
+    }
+
+    public static void runExerciseFifthteen(){
+        int choice;
+        double initial,finalOne,timeOne,constant,total;
+                 
         Scanner userIn = new Scanner(System.in);
 
-
         System.out.println("1. Final amount");
+        System.out.println("2. Initial amount");
+        System.out.println("3. Constant <half-life>");
+        System.out.println("Find: ");
+        choice = userIn.nextInt();
+
+        switch(choice){
+
+            case 1:
+
+                System.out.println("Enter initial mass: ");
+                initial = userIn.nextDouble();
+                System.out.println("Enter elaspse time in years: ");
+                timeOne = userIn.nextDouble();
+                System.out.println("Constant <half-life>:");
+                constant = userIn.nextDouble();
+                total = initial*Math.exp(constant*timeOne);
+                System.out.println("Final mass:" + total);
+                break;
+
+            case 2:
+
+                System.out.println("Enter final mass: ");
+                finalOne = userIn.nextDouble();
+                System.out.println("Enter elaspse time in years: ");
+                timeOne = userIn.nextDouble();
+                System.out.println("Constant <half-life>:");
+                constant = userIn.nextDouble();
+                total = finalOne/Math.exp(constant*timeOne);
+                System.out.println("Initial mass: " + total);
+                break;
+
+            case 3: 
+
+                System.out.println("Enter initial mass: ");
+                initial = userIn.nextDouble();
+                System.out.println("Enter final mass: ");
+                finalOne = userIn.nextDouble();
+                System.out.println("Enter elaspse time in years: ");
+                timeOne = userIn.nextDouble();
+                total = Math.log(finalOne/initial)/timeOne;
+                System.out.println("Constant <half-life>: " + total);
+                break;
+        }
+        userIn.close();
     }
-*/
+
     public static void runExerciseSixteen(){
         double angle;
         double cos,sin,tan;
@@ -352,6 +405,6 @@ public class ChapterFiveExercies {
     }
 
     public static void main(String[] args){
-        runExerciseSixteen();
+        runExerciseFifthteen();
     }
 }
