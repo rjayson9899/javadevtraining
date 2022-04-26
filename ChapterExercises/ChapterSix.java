@@ -75,10 +75,12 @@ public class ChapterSix {
         number = userIn.nextDouble();
         
         for (int x = 0; x < number; x++){
+
             System.out.println("Enter the scores: ");
             score = userIn.nextDouble();
 
             if (score >= 70){
+
                 counter += 1;
             }
         }
@@ -89,7 +91,7 @@ public class ChapterSix {
 
     public static void runFactorial(){
         double asd;
-        double total = 0, counter;
+        double total, counter;
 
         Scanner userIn = new Scanner(System.in);
 
@@ -97,6 +99,7 @@ public class ChapterSix {
         asd = userIn.nextDouble();
         total = asd;
         for(double x = asd; x > 1; x--){
+
             counter = x - 1;
             System.out.println(counter);
 
@@ -105,9 +108,47 @@ public class ChapterSix {
         }
 
     }
+
+    public static void runOddSum(){
+        int user;
+        int newtotal = 0;
+        int total = 0;
+
+        Scanner userIn = new Scanner(System.in);
+
+        System.out.println("Enter a number: ");
+        user = userIn.nextInt();
+
+        for(int x = 1; x <= user; x += 2){
+
+            total += x;           
+
+        }
+        newtotal = total + user;
+        System.out.println(newtotal);
+    }
+
+    public static void runAccountSetup(){
+        String user,pass;
+
+        Scanner userIn = new Scanner(System.in);
+
+        System.out.println("Enter the username: ");
+        user = userIn.nextLine();
+        System.out.println("Enter the password:");
+        pass = userIn.nextLine();
+    
+        while (pass.length() <= 7){
+            System.out.println("The password should be 8 characters long. ");
+            System.out.println("Enter the password:");
+            pass = userIn.nextLine();
+        }
+        System.out.println("Your username is " + user.toLowerCase() + " and password is " + pass.toLowerCase());
+
+    }
     public static void main(String[] args){
-        runFactorial();
-        /*   int choice;
+       // runFactorial();
+        int choice;
 
         Scanner userIn = new Scanner(System.in);
 
@@ -115,7 +156,7 @@ public class ChapterSix {
         System.out.println("1. Exercise Seven");
         System.out.println("2. Exercise Eleven");
         System.out.println("3. Exercise Thirteen");
-       // System.out.println("4. Exercise Sixteen");
+        System.out.println("4. Exercise Sixteen");
         choice = userIn.nextInt();
 
         switch(choice){
@@ -133,11 +174,14 @@ public class ChapterSix {
             break;
 
             case 4:
-            runExerciseEleven();
+            runOddSum();
             break;
             
+            case 5:
+            runAccountSetup();
+            break;
         }
-        */
+        
     }
     
 }
