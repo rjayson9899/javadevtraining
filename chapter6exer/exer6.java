@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class exer6 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        ArrayList<Integer> expList = new ArrayList<Integer>();
+        //ArrayList<Integer> expList = new ArrayList<Integer>();
         int check, sum = 0;
         String inputNum;
 
@@ -17,8 +17,8 @@ public class exer6 {
 
         
             for(int x = 0; x < inputNum.length(); x++){
-                expList.add(Character.getNumericValue(inputNum.charAt(x)));
-                sum += expList.get(x);
+                sum += Character.getNumericValue(inputNum.charAt(x));
+                
             }
 
             System.out.println("The sum of all integers is: " + sum);
