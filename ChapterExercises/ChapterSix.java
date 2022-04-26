@@ -2,7 +2,6 @@
  This program was developed by Macario Peralta V.
  The purpose of this program is to help the developer 
  exercise and gain more experience with coding in Java.
- Most of the codes in here are 
  */
 
 import java.util.Scanner;
@@ -89,6 +88,7 @@ public class ChapterSix {
         System.out.println("You have " + percentage + "% scores that are over 70%. ");
     }
 
+    //this program gets the factorial of the user inputted number.
     public static void runFactorial(){
         double asd;
         double total, counter;
@@ -109,6 +109,7 @@ public class ChapterSix {
 
     }
 
+    //this program gets the odd numbers till the user inputted number.
     public static void runOddSum(){
         int user;
         int newtotal = 0;
@@ -128,6 +129,7 @@ public class ChapterSix {
         System.out.println(newtotal);
     }
 
+    //this program is a basic account setup.
     public static void runAccountSetup(){
         String user,pass;
 
@@ -147,16 +149,18 @@ public class ChapterSix {
 
     }
     public static void main(String[] args){
-       // runFactorial();
+
         int choice;
 
         Scanner userIn = new Scanner(System.in);
 
         System.out.println("Please choose what exercise: ");
-        System.out.println("1. Exercise Seven");
-        System.out.println("2. Exercise Eleven");
-        System.out.println("3. Exercise Thirteen");
-        System.out.println("4. Exercise Sixteen");
+        System.out.println("1. runPrompter");
+        System.out.println("2. runEven");
+        System.out.println("3. runPercentPassing");
+        System.out.println("4. runFactorial");
+        System.out.println("5. runOddSum");
+        System.out.println("5. runAccountSetup");
         choice = userIn.nextInt();
 
         switch(choice){
@@ -174,10 +178,14 @@ public class ChapterSix {
             break;
 
             case 4:
-            runOddSum();
+            runFactorial();;
             break;
             
             case 5:
+            runOddSum();
+            break;
+
+            case 6:
             runAccountSetup();
             break;
         }

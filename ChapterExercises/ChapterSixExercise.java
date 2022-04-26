@@ -1,7 +1,9 @@
 /*
-This program was developed by Macario Peralta V
+ This program was developed by Macario Peralta V.
+ The purpose of this program is to help the developer 
+ exercise and gain more experience with coding in Java.
+ */
 
-*/
 import java.util.Scanner;
 
 public class ChapterSixExercise {
@@ -39,7 +41,7 @@ public class ChapterSixExercise {
 
         while(invest < finalz){
             counter += 1;
-            invest += invest*rate;
+            invest += invest*rate; 
         }
         System.out.println(counter);
         System.out.println("The rate is: " + invest);
@@ -108,7 +110,7 @@ public class ChapterSixExercise {
 
         for (int y = elapsed; y > 0; y--){
     
-            elapsed = elapsed - 1;
+            elapsed -= 1;
             start += 1;
 
             if(start > 12){
@@ -139,6 +141,41 @@ public class ChapterSixExercise {
 
     
     public static void main(String[] args)throws Exception{
-        runExerciseThree();
+        int choice;
+
+        Scanner userIn = new Scanner(System.in);
+
+        System.out.println("Please choose what exercise: ");
+        System.out.println("1.runExerciseOne");
+        System.out.println("2.runExerciseThree");
+        System.out.println("3. runExerciseFive");
+        System.out.println("4. runExerciseSix");
+        System.out.println("5. runExerciseEleven");
+
+        choice = userIn.nextInt();
+
+        switch(choice){
+
+            case 1:
+            runExerciseOne();
+            break;
+
+            case 2:
+            runExerciseThree();
+            break;
+
+            case 3:
+            runExerciseFive();
+            break;
+
+            case 4:
+            runExerciseSix();;
+            break;
+            
+            case 5:
+            runExerciseEleven();
+            break;
+
+        }
     }
 }
