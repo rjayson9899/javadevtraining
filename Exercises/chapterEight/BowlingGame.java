@@ -27,7 +27,7 @@ public class BowlingGame {
         }
     }
 
-    public void doThrow() {
+    public boolean doThrow() {
         Random rand = new Random();
         int hits;
         
@@ -38,11 +38,13 @@ public class BowlingGame {
                 points = 20;
                 pins = 0;
                 chances = 0;
+                return false;
             }
             else {
                 System.out.println(hits + " pins have been hit");
                 pins -= hits;
                 chances--;
+                return true;
             }
         }
         else if (chances == 1) {
@@ -57,21 +59,29 @@ public class BowlingGame {
                 pins -= hits;
             }
             chances--;
+            return false;
         }
         else {
             System.out.println("\nOut of chances, check out your points and start a new game\n");
+            return false;
         }
     }
 
-    public double getPoints() {
-        if (pins > 0) {
-            points = 10 - pins;
-            isReady = false;
-            return points;
+    public int getPoints() {
+        if (isReady) {
+            if (pins > 0) {
+                points = 10 - pins;
+                isReady = false;
+                return points;
+            }
+            else {
+                isReady = false;
+                return points;
+            }
         }
         else {
-            isReady = false;
-            return points;
+            System.out.println("No game in progress, please begin a round");
+            return -1;
         }
     }
 }
