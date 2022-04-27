@@ -14,7 +14,6 @@ public class exer6 {
 
         if(check>0){
             inputNum = Integer.toString(check);
-
         
             for(int x = 0; x < inputNum.length(); x++){
                 sum += Character.getNumericValue(inputNum.charAt(x));

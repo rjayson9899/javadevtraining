@@ -5,45 +5,33 @@ import java.util.Scanner;
 public class exer2 {
     
     public static Double inchtoCent(Double input){
-        
-        input = input * 2.54;
 
-        return input;
+        return input * 2.54;
     }
 
     public static Double feettoCent(Double input){
-        
-        input = input * 30;
 
-        return input;
+        return input  * 30;
     }
 
     public static Double yardstoMet(Double input){
-        
-        input = input * 0.91;
 
-        return input;
+        return input * 0.91;
     }
 
     public static Double milestoKil(Double input){
-        
-        input = input * 1.6;
 
-        return input;
+        return input * 1.6;
     }
 
     public static Double centToInch(Double input){
-        
-        input = input / 2.54;
-
-        return input;
+    
+        return input / 2.54;
     }
 
     public static Double metToYard(Double input){
-        
-        input = input / 0.91;
 
-        return input;
+        return input / 0.91;
     }
 
     public static Double KilToMiles(Double input){
@@ -54,10 +42,8 @@ public class exer2 {
     }
 
     public static Double centToFeet(Double input){
-        
-        input = input / 30;
 
-        return input;
+        return input / 30;
     }
 
     public static void main(String[] args) {
