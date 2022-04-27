@@ -24,10 +24,16 @@ public class BowlingApp {
         }
 
         for(int x = 0; x < 10; x++){
+            
+            System.out.println("Frame: " + (x+1));
+
             for(int y = 0; y < numPlayers; y++){
                 scoring = players.get(y).startFrame();
+                players.get(y).setScore(scoring);
                 System.out.println("score of " + players.get(y).getName() + " is: " + scoring);
+                System.out.println("Total score of " + players.get(y).getName() + " is: " + players.get(y).getScore());                
             }
+            
         }
 
         input.close();

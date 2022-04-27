@@ -20,12 +20,14 @@ public class BowlGame extends Player {
 
        while(thrower>0){
 
-            checker = rand.nextInt(10) - 1;
+            
             if(thrower == 2){
+                checker = rand.nextInt(10) + 1;
                 pinsLeft = pins - checker;
             }
 
             else{
+                checker = rand.nextInt(pinsLeft) + 1;
                 pinsLeft -= checker;
             }
            
@@ -40,12 +42,12 @@ public class BowlGame extends Player {
             thrower--;
        }
 
-       if(pinsLeft > 0){
-          return 10 - pinsLeft;
+       if(pinsLeft < 0 ){
+          return 0;
        }
 
        else{
-           return 0;
+           return 10 - pinsLeft;
        }
 
     }
