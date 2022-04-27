@@ -9,54 +9,54 @@ public class PiggyBank {
     private int quarters;
 
     public PiggyBank() {
-        nickels = 0;
-        pennies = 0;
-        dimes = 0;
-        quarters = 0;
+        this.nickels = 0;
+        this.pennies = 0;
+        this.dimes = 0;
+        this.quarters = 0;
     }
 
     private String getDollarAmount() {
         Double value = 0.0;
         NumberFormat dollar = NumberFormat.getCurrencyInstance();
 
-        value += (double) quarters * 0.25;
-        value += (double) dimes * 0.10;
-        value += (double) nickels * 0.05;
-        value += (double) pennies * 0.01;
+        value += (double) this.quarters * 0.25;
+        value += (double) this.dimes * 0.10;
+        value += (double) this.nickels * 0.05;
+        value += (double) this.pennies * 0.01;
 
         return dollar.format(value);
     }
 
     public void showTotal() {
-        System.out.println("Pennies: " + pennies);
-        System.out.println("Nickels: " + nickels);
-        System.out.println("Dimes: " + dimes);
-        System.out.println("Quarters: " + quarters);
+        System.out.println("Pennies: " + this.pennies);
+        System.out.println("Nickels: " + this.nickels);
+        System.out.println("Dimes: " + this.dimes);
+        System.out.println("Quarters: " + this.quarters);
     }
 
     public void addNickel() {
-        nickels++;
+        this.nickels++;
     }
 
     public void addDime() {
-        dimes++;
+        this.dimes++;
     }
 
     public void addPenny() {
-        pennies++;
+        this.pennies++;
     }
 
     public void addQuarter() {
-        quarters++;
+        this.quarters++;
     }
 
     public void emptyBank() {
-        System.out.println(pennies + " penny(ies), " + nickels + " nickel(s), " + dimes + " dime(s), and " +
-            quarters + " quarter(s) removed from bank for a total of: " + getDollarAmount());
+        System.out.println(this.pennies + " penny(ies), " + this.nickels + " nickel(s), " + this.dimes + 
+            " dime(s), and " + this.quarters + " quarter(s) removed from bank for a total of: " + getDollarAmount());
         
-        nickels = 0;
-        pennies = 0;
-        dimes = 0;
-        quarters = 0;
+        this.nickels = 0;
+        this.pennies = 0;
+        this.dimes = 0;
+        this.quarters = 0;
     }
 }
