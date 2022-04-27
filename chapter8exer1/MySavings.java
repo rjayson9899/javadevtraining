@@ -1,4 +1,4 @@
-package chapter8exer;
+package chapter8exer1;
 
 import java.util.Scanner;
 
