@@ -5,6 +5,7 @@ public class MySavings {
         int choice;
 
         Scanner userIn = new Scanner(System.in);
+        PiggyBank p = new PiggyBank();
 
         System.out.println("1. Show total in bank.");
         System.out.println("2. Add a penny.");
@@ -14,7 +15,39 @@ public class MySavings {
         System.out.println("6. Take money out of bank.");
         System.out.println("Enter 0 to quit.");
         System.out.println("Enter your choice: ");
-        choice = userIn.nextInt();
         
+        choice = userIn.nextInt();
+        switch(choice){
+            case 1:
+                p.showTotal();
+                main(args);
+            break;
+
+            case 2:
+                p.addPenny();
+                main(args);
+            break;
+
+            case 3:
+                p.addNickel();
+            break;
+
+            case 4:
+                p.addDime();
+            break;
+
+            case 5:
+                p.addQuarter();
+            break;
+
+            case 6:
+                p.takeMoney();
+            break;
+
+            case 0:
+                System.exit(0);
+            break;
+
+        }
     }
 }
