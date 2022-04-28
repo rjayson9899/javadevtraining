@@ -28,6 +28,7 @@ public class Loops {
             newnumb += numb;
             System.out.println(numb + " x "+ x + " = " + newnumb);
         }
+        userIn.close();
     }
 
     public static void runExFour(){
@@ -45,6 +46,7 @@ public class Loops {
             System.out.println(total);
         }
         System.out.println(total);
+        userIn.close();
     }
 
     public static void runExFive(){
@@ -63,6 +65,7 @@ public class Loops {
             System.out.println(total);
         }
         System.out.println(total);
+        userIn.close();
     }
 
     public static void runExSix(){
@@ -73,7 +76,7 @@ public class Loops {
         System.out.println("Enter a number ");
         one = userIn.nextInt();
         
-
+        userIn.close();
     }
 
     public static void main(String[] args){

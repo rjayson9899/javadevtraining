@@ -1,4 +1,4 @@
-package ChapterEight.ChapterEightExerciseOne;
+package ChapterEight.ChapterEightExerciseOneV1;
 import java.util.Scanner;
 public class MySavings {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class MySavings {
 
         Scanner userIn = new Scanner(System.in);
         PiggyBank p = new PiggyBank();
-
+    do{
         System.out.println("1. Show total in bank.");
         System.out.println("2. Add a penny.");
         System.out.println("3. Add a nickel.");
@@ -20,12 +20,10 @@ public class MySavings {
         switch(choice){
             case 1:
                 p.showTotal();
-                main(args);
             break;
 
             case 2:
                 p.addPenny();
-                main(args);
             break;
 
             case 3:
@@ -49,5 +47,7 @@ public class MySavings {
             break;
 
         }
+    }
+    while(choice != 0);
     }
 }
