@@ -45,6 +45,7 @@ public class PiggyBank {
     }
 
     public void cashOut(){
+        System.out.println("Getting " + penny + " pennies, " + nickel + " nickels " +  dime + " dimes, " + "and " + quarter + " quarters...");
         total = 0;
         quarter = 0;
         dime = 0;
