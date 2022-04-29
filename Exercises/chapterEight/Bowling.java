@@ -31,7 +31,9 @@ public class Bowling {
             for (int j = 0; j < playerCount; j++) {
                 int points;
                 System.out.println("Current turn: " + players[j].getName());
-                points = players[j].startTurn(game, in, i);
+                System.out.print("Press enter to begin round...");
+                in.nextLine();
+                points = players[j].startTurn(game, i);
                 System.out.println("Points for " + players[j].getName() + ": " + points + "\n");
             }
         }

@@ -1,7 +1,5 @@
 package Exercises.chapterEight;
 
-import java.util.Scanner;
-
 public class BowlingPlayer {
     private String name;
     private int[] score = new int[10];
@@ -13,14 +11,11 @@ public class BowlingPlayer {
         this.name = name;
     }
     
-    public int startTurn(BowlingGame game, Scanner in, int frame) {
+    public int startTurn(BowlingGame game, int frame) {
         int points;
 
         game.startGame();
-        do {
-            System.out.print("Press enter to throw...");
-            in.nextLine();
-        } while (game.doThrow());
+        while (game.doThrow());
         points = game.getPoints();
         this.score[frame] = points;
 
