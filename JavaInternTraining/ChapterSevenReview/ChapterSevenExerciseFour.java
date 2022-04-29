@@ -5,7 +5,7 @@ public class ChapterSevenExerciseFour {
     public static void drawBar(int length){
         for (int y = 0; y <= length; y++){
             for (int i = 0; i <= length; i++) {
-                if (){
+                if (int x = 0;){
                 System.out.print("*");
                 }
             }
@@ -27,5 +27,6 @@ public class ChapterSevenExerciseFour {
 
         drawBar(user);
         //addSpace();
+        userIn.close();
     }
 }

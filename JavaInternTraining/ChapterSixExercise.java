@@ -31,7 +31,7 @@ public class ChapterSixExercise {
             else {
                 System.out.println("not a prime number.");
             }
-
+            userIn.close();
     }
         
     public static void runExerciseThree(){
@@ -62,7 +62,7 @@ public class ChapterSixExercise {
             System.out.println(a);
 
         }
-
+        userIn.close();
     }
 
     public static void runExerciseSix(){
@@ -81,7 +81,7 @@ public class ChapterSixExercise {
         }
 
         System.out.println("The sum of the digits is: " + store);
-    
+        userIn.close();
     }
     
     public static void runExerciseEleven(){
@@ -137,6 +137,7 @@ public class ChapterSixExercise {
         }
 
         System.out.println("The time is: " + start + " " + ifAM);
+        userIn.close();
     }
 
 
@@ -179,5 +180,6 @@ public class ChapterSixExercise {
             break;
 
         }
+        userIn.close();
     }
 }

@@ -105,6 +105,7 @@ public class ChapterSevenExerciseTwo {
             System.out.println(ans);
             break;
 
-        }   
+        }  
+        userIn.close(); 
     }
 }

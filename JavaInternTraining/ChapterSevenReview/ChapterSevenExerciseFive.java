@@ -39,6 +39,6 @@ public class ChapterSevenExerciseFive{
         System.out.println(getDollarAmount(penny, nickels, dimes, quarters));
         
         
-
+        userIn.close();
     }
 }

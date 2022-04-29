@@ -69,12 +69,12 @@ public class Loops {
     }
 
     public static void runExSix(){
-        int one,two, total = 0;
+       // int one,two, total = 0;
 
         Scanner userIn = new Scanner(System.in);
 
         System.out.println("Enter a number ");
-        one = userIn.nextInt();
+      //  one = userIn.nextInt();
         
         userIn.close();
     }

@@ -32,6 +32,7 @@ public class ChapterSixReviewItems {
             System.out.println("The number that you have entered is invalid.");
        }
        while( comp < inOne && comp > inTwo );
+       userIn.close();
     }
     
     //this program just shows even number from 1-20.
@@ -59,7 +60,7 @@ public class ChapterSixReviewItems {
             System.out.println(counter);
         }
         System.out.println("Total sum is: " + sum );
-        
+        userIn.close();
     }
     
     //this program prompts user for scores and only shows those above 70%
@@ -86,6 +87,7 @@ public class ChapterSixReviewItems {
 
         percentage = (counter/number)*100;
         System.out.println("You have " + percentage + "% scores that are over 70%. ");
+        userIn.close();
     }
 
     //this program gets the factorial of the user inputted number.
@@ -106,7 +108,7 @@ public class ChapterSixReviewItems {
             total = total*counter;
             System.out.println(total);
         }
-
+     userIn.close();
     }
 
     //this program gets the odd numbers till the user inputted number.
@@ -127,6 +129,7 @@ public class ChapterSixReviewItems {
         }
         newtotal = total + user;
         System.out.println(newtotal);
+        userIn.close();
     }
 
     //this program is a basic account setup.
@@ -146,7 +149,7 @@ public class ChapterSixReviewItems {
             pass = userIn.nextLine();
         }
         System.out.println("Your username is " + user.toLowerCase() + " and password is " + pass.toLowerCase());
-
+        userIn.close();
     }
     public static void main(String[] args){
 
@@ -189,8 +192,8 @@ public class ChapterSixReviewItems {
             runAccountSetup();
             break;
         }
-        
+        userIn.close();
     }
-    
+       
 }
 

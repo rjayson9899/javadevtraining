@@ -103,7 +103,7 @@ public class ChapterFiveExercise {
             total = copy*0.25;
             System.out.println("Total cost is: " + money.format(total));
         }
-
+        input.close();
     }
 
     // this program judges the users package if it is eligible for transport.
@@ -135,6 +135,7 @@ public class ChapterFiveExercise {
         else {
             System.out.println("Your package is accepted.");
         }
+        user.close();
     }
 
     // this program calculates for the rates of an egg store.
@@ -219,10 +220,10 @@ public class ChapterFiveExercise {
     public static void runExerciseFive(){
         double percent;
 
-        Scanner userin = new Scanner (System.in);
+        Scanner userIn = new Scanner (System.in);
 
         System.out.println("Enter the percentage: ");
-        percent = userin.nextDouble();
+        percent = userIn.nextDouble();
 
         if (percent < 60){
             System.out.println("The corresponding letter grade is: F");
@@ -239,6 +240,7 @@ public class ChapterFiveExercise {
         else if (percent >= 90 && percent <= 100){
             System.out.println("The corresponding letter grade is: A");
         }
+        userIn.close();
     }
 
     //this program randomly generates 2 numbers and operation and checks the user's answer.
@@ -473,5 +475,6 @@ public class ChapterFiveExercise {
 
         }
         runExerciseFifthteen();
+        userIn.close();
     }
 }

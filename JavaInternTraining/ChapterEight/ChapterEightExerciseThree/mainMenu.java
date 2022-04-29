@@ -4,43 +4,46 @@ package ChapterEight.ChapterEightExerciseThree;
 public class mainMenu {
     
     public static void main(String[] args){
-        int choice;
+      //  int choice;
         int numbHam,numbSal,numbFries,numbSoda;
-        double totalHam,totalSal,totalFries,totalSoda;
+        double total,totalHam,totalSal,totalFries,totalSoda;
 
         Scanner userIn = new Scanner(System.in);
         food hamburger = new food(1.85,9,33,1);
         food salad = new food(2,1,11,5);
         food fries = new food(1.30,11,36,4);
         food soda = new food(0.95,0,38,0);
-    do{
+  //  do{
         
-        System.out.format("");
-        System.out.println("2. Add a penny.");
-        System.out.println("3. Add a nickel.");
-        System.out.println("4. Add a dime.");
-        System.out.println("5. Add a quarter.");
-        System.out.println("6. Take money out of bank.");
+        System.out.format("%7s %12s %10s %18s %12s",  " Item", " price", "Fat(g)", "Carbohydrates(g)", "Fiber(g)\n");
+        System.out.format("%10s %9s %7s %12s %15s", "hamburger", "$1.85", "9", "33", "1\n");
+        System.out.format("%7s %12s %7s %12s %15s", "salad", "$2.00", "1", "11","5\n");
+        System.out.format("%10s %8s %7s %12s %15s", "frech fries", "$1.30", "11", "36", "4\n");
+        System.out.format("%7.5s %12s %7s %12s %15s", "soda", "$0.95", "0", "38", "0\n");
         System.out.println("Enter 0 to quit.");
         
         System.out.println("Enter the number of hamburgers: ");
         numbHam = userIn.nextInt();
-        System.out.println("Each hamburger has " + hamburger.showFat() + " of fat " + hamburger.showCarbs() + "" + hamburger.showFiber());
+        System.out.println("Each hamburger has " + hamburger.showFat() + "g of fat, " + hamburger.showCarbs() + "g of carbs, and " + hamburger.showFiber() + "g of fiber.");
         totalHam = numbHam*hamburger.price;
         System.out.println("Enter the number of salads: ");
         numbSal = userIn.nextInt();
-        System.out.println("Each salad has " + salad.showFat() + " of fat " + salad.showCarbs() + "" + salad.showFiber());
-        totalSal = numbHam*salad.price;
+        System.out.println("Each salad has " + salad.showFat() + "g of fat, " + salad.showCarbs() + "g of carbs, and " + salad.showFiber() + "g of fiber.");
+        totalSal = numbSal*salad.price;
         System.out.println("Enter the number of french fries: ");
         numbFries = userIn.nextInt();
-        System.out.println("Each french fries has " + fries.showFat() + " of fat " + fries.showCarbs() + "" + fries.showFiber());
-        totalFries = numbHam*fries.price;
+        System.out.println("Each french fries has " + fries.showFat() + "g of fat, " + fries.showCarbs() + "g of carbs, and " + fries.showFiber() + "g of fiber.");
+        totalFries = numbFries*fries.price;
         System.out.println("Enter the number of sodas: ");
         numbSoda = userIn.nextInt();
-        System.out.println("Each sodas has " + soda.showFat() + " of fat " + soda.showCarbs() + "" + soda.showFiber());
-        totalSoda = numbHam*soda.price;
-    }
-    while(choice != 0);
+        System.out.println("Each sodas has " + soda.showFat() + "g of fat, " + soda.showCarbs() + "g of carbs, and " + soda.showFiber() + "g of fiber.");
+        totalSoda = numbSoda*soda.price;
+
+        total = totalHam + totalSal + totalFries + totalSoda;
+        System.out.println("Your order comes to: $" + total);
+
+  //  }
+    //while(choice != 0);
     userIn.close();
     }
 }

@@ -28,5 +28,6 @@ public class ChapterSevenExerciseThree {
         else {
             System.out.println("not a prime number.");
         }
+        userIn.close();
     }
 }

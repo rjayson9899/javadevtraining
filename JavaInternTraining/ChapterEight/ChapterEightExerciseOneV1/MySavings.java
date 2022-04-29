@@ -49,5 +49,6 @@ public class MySavings {
         }
     }
     while(choice != 0);
+    userIn.close();
     }
 }

@@ -14,7 +14,7 @@ public class ChapterSevenTimeCon {
         days = days*Hours;
 
         System.out.println(days);
-
+        userIn.close();
     }
 
     public static void  convertHourstoMins(){
@@ -30,7 +30,7 @@ public class ChapterSevenTimeCon {
         days = days*Hours;
 
         System.out.println(days);
-
+        userIn.close();
     
     }
 
@@ -48,7 +48,7 @@ public class ChapterSevenTimeCon {
 
         System.out.println(days);
 
-    
+        userIn.close();
     }
 
     public static void convertHourstoDays(){
@@ -65,7 +65,7 @@ public class ChapterSevenTimeCon {
 
         System.out.println(days);
 
-    
+        userIn.close();
     }
 
 
@@ -100,7 +100,7 @@ public class ChapterSevenTimeCon {
 
 
         
-
+        userIn.close();
         
     } 
  }

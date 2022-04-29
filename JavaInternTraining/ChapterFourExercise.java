@@ -22,6 +22,7 @@ public class ChapterFourExercise {
         System.out.println(hundreds);
         System.out.println(tens);
         System.out.println(ones);
+        user.close();
     }
 
     public static void runExerciseEleven(){
@@ -66,6 +67,6 @@ public class ChapterFourExercise {
             break;
 
         }
-
+        userIn.close();
     }
 }
