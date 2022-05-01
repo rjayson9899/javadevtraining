@@ -19,12 +19,12 @@ public class BowlingGame{
         this.throwBall = 2;
     }
 
-    public void startGame() {
+    public int startGame() {
         int pinHits;
-
+        
         Random rand = new Random();
 
-        if (throwBall == 2) {
+        if (this.throwBall == 2) {
             pinHits = rand.nextInt(11);
             if (pinHits == 10){
                 System.out.println("Strike!");
@@ -33,15 +33,16 @@ public class BowlingGame{
                 this.throwBall = 0;
             } else {
                 System.out.println("You've hit a total of " + pinHits + "pins");
-                this.bowlingPins = pinHits;
+                this.bowlingPins = 10 - pinHits;
                 this.throwBall = 1;
-                this.score = 10 - pinHits;
+                this.score = pinHits;
             }
-                System.out.println(this.score);
+
+            return this.score;
         }
-        else if (throwBall == 1){
-            pinHits = rand.nextInt(11);
-            if (pinHits == 10){
+        else if (this.throwBall == 1){
+            pinHits = rand.nextInt(bowlingPins + 1);
+            if (pinHits == bowlingPins){
                 System.out.println("Spare!");
                 this.score = 15;
                 this.bowlingPins = 0;
@@ -50,9 +51,13 @@ public class BowlingGame{
                 System.out.println("You've hit a total of " + pinHits + "pins");
                 this.bowlingPins = pinHits;
                 this.throwBall = 0;
-                this.score = 10 - pinHits;
+                this.score += pinHits;
             }
-        }   
+            return this.score;
+        }
+        else {
+            return -1;
+        }               
     }
 
     public int getScore(){
