@@ -1,4 +1,4 @@
-package Exercises.chapterEight;
+package Exercises.chapterEight.exerciseSeven;
 
 public class BowlingPlayer {
     private String name;

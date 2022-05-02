@@ -1,4 +1,4 @@
-package Exercises.chapterEight;
+package Exercises.chapterEight.exerciseThree;
 
 import java.util.Scanner;
 import java.text.NumberFormat;
