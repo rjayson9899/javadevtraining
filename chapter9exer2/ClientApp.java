@@ -10,7 +10,7 @@ public class ClientApp {
         double withdrawal = 0 , deposit = 0;
         PersonalAcct personal = new PersonalAcct(50, "Mac" , "Isaac", "Taft", "Manila", "Manila" , "1004");
         BusinessAcct business = new BusinessAcct(550, "Kate" , "Isaac", "Wilma", "Tayabas", "Quezon" , "4301");
-
+        
         do{
             System.out.println("\033[H\033[2J");
             System.out.println("Welcome to BDI banking!");
@@ -36,7 +36,6 @@ public class ClientApp {
                     System.out.println("-----------------------");
                     System.out.print("Your decision: ");
                     choice = input.nextInt();
-                    //input.nextInt();
                     if(choice == 1){
                     System.out.println("Info: ");
                     System.out.println(personal.toString());    
@@ -66,14 +65,15 @@ public class ClientApp {
 
 
                     if(choice == 1){
-                        System.out.print("amount to withdraw: ");
-                        withdrawal = input.nextDouble();
-
-                        while(personal.getBalance() < withdrawal){
-                            System.out.println("Insufficient Balance");
+                        do{
                             System.out.print("amount to withdraw: ");
                             withdrawal = input.nextDouble();
-                        }
+
+                            if(withdrawal > personal.getBalance()){
+                                System.out.println("Insufficient Balance");
+                            }
+
+                        }while(personal.getBalance() < withdrawal);
 
                         if(personal.getBalance() < 100){
                             System.out.println("Additional 2 dollars will be deducted due to low minimum balance.");
@@ -90,14 +90,15 @@ public class ClientApp {
 
                     else if(choice == 2){
 
-                        System.out.print("amount to withdraw: ");
-                        withdrawal = input.nextDouble();
-
-                        while(business.getBalance() < withdrawal){
-                            System.out.println("Insufficient Balance");
+                        do{
                             System.out.print("amount to withdraw: ");
                             withdrawal = input.nextDouble();
-                        }
+
+                            if(withdrawal > business.getBalance()){
+                                System.out.println("Insufficient Balance");
+                            }
+
+                        }while(business.getBalance() < withdrawal);
 
                         if(business.getBalance() < 500){
                             System.out.println("Additional 10 dollars will be deducted due to low minimum balance.");
