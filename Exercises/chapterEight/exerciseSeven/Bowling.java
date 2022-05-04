@@ -27,7 +27,6 @@ public class Bowling {
 
         for (int i = 0; i < 10; i++) {
             System.out.println("\nFrame " + (i + 1));
-
             for (int j = 0; j < playerCount; j++) {
                 int points;
                 System.out.println("Current turn: " + players[j].getName());

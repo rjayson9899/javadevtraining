@@ -5,9 +5,6 @@ public class BowlingPlayer {
     private int[] score = new int[10];
 
     public BowlingPlayer(String name) {
-        for (int i = 0; i < 10; i++) {
-            this.score[i] = 0;
-        }
         this.name = name;
     }
     
