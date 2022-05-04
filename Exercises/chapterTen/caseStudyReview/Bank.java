@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Bank {
-    private ArrayList accounts;
+    private ArrayList<Account> accounts;
 
     /**
     * constructor
@@ -15,7 +15,7 @@ public class Bank {
     * post: accounts has been initialized.
     */
     public Bank() {
-        accounts = new ArrayList();
+        accounts = new ArrayList<Account>();
     }
 
     /**

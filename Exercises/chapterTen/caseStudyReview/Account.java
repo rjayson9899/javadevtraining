@@ -152,6 +152,7 @@ public class Account {
     public String toString() {
         String accountString;
         NumberFormat money = NumberFormat.getCurrencyInstance();
+        accountString = street + " " + city + " " + state + ", " + zip + "\n";
         accountString = acctID + "\n";
         accountString += cust.toString();
         accountString += "Current balance is " + money.format(balance);
