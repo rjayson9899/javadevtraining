@@ -1,4 +1,4 @@
-package ChapterEight.ChapterEightExerciseOneV1;
+package ChapterEightExerciseOneV1;
 import java.util.Scanner;
 public class MySavings {
     public static void main(String[] args) {

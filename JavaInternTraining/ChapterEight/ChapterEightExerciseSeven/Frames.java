@@ -1,4 +1,4 @@
-package ChapterEight.ChapterEightExerciseSeven;
+package ChapterEightExerciseSeven;
 
 public class Frames {
 

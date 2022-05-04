@@ -1,4 +1,4 @@
-package ChapterEight.ChapterEightExerciseThree;
+package ChapterEightExerciseThree;
  import java.util.Scanner;
 
 public class mainMenu {

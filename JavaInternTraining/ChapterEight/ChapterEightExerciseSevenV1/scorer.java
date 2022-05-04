@@ -1,4 +1,4 @@
-package ChapterEight.ChapterEightExerciseSevenV1;
+package ChapterEightExerciseSevenV1;
 
 public class scorer {
     int pins = 10;

@@ -1,4 +1,4 @@
-package ChapterEight.ChapterEightExerciseSevenV1;
+package ChapterEightExerciseSevenV1;
 
 import java.util.ArrayList;
 import java.util.Scanner;

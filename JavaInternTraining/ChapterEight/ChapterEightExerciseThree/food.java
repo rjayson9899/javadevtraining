@@ -1,4 +1,4 @@
-package ChapterEight.ChapterEightExerciseThree;
+package ChapterEightExerciseThree;
 
 public class food {
     
