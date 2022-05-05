@@ -1,4 +1,4 @@
-package Exercises.chapterNine;
+package Exercises.chapterNine.exerciseTwo;
 
 public class Customer {
     private String firstName, lastName, street, city, state, zip;

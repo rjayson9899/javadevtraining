@@ -1,4 +1,4 @@
-package Exercises.chapterNine;
+package Exercises.chapterNine.exerciseOne;
 
 class Staff extends UEmployee {
     private String department;

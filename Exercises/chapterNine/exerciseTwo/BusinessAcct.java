@@ -1,4 +1,4 @@
-package Exercises.chapterNine;
+package Exercises.chapterNine.exerciseTwo;
 
 public class BusinessAcct extends Account {
     

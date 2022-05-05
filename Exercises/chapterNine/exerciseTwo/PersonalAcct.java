@@ -1,4 +1,4 @@
-package Exercises.chapterNine;
+package Exercises.chapterNine.exerciseTwo;
 
 public class PersonalAcct extends Account {
     
