@@ -6,17 +6,25 @@ public class Inventory {
   private int amount;
 
   public Inventory(int stockNum, String name, int amount){
-        this.stockNum = stockNum;
+        this.stockNum = 1000 + stockNum;
         this.name = name;
         this.amount = amount;
   }
 
-  public void setStockNum(int number){
-    this.stockNum = 1000 + number;
+  public void setAmount(int amount){
+    this.amount = amount;
   }
 
-  public void setAmount(int amount){
+  public void addAmount(int amount){
     this.amount += amount;
+  }
+
+  public void sell(int amount){
+    this.amount -= amount;
+  }
+
+  public void setName(String name){
+    this.name = name;
   }
 
   public String getName(){
@@ -37,7 +45,7 @@ public class Inventory {
   }
 
   public void showInventory(){
-    System.out.println(stockNum + name + amount);
+    System.out.format("%-20s %-20s %-20s \n",stockNum, name, amount);
   }
 
   public void sellStock(int amount){
