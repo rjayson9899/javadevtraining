@@ -5,7 +5,6 @@ import java.text.NumberFormat;
 public class Account {
     private double balance;
     private Customer cust;
-    private String name;
 
     /**
     * constructor
@@ -16,7 +15,6 @@ public class Account {
     public Account(double bal, String fName, String lName, String str, String city, String st, String zip) {
         balance = bal;
         cust = new Customer(fName, lName, str, city, st, zip);
-        this.name = fName;
     }
 
     /**
@@ -62,9 +60,5 @@ public class Account {
         accountString = cust.toString();
         accountString += "Current balance is " + money.format(balance);
         return(accountString);
-    }
-
-    public void printBal() {
-        System.out.println(this.name + " balance: " + this.balance);
     }
 }
