@@ -1,0 +1,6 @@
+Basketball
+10
+Racket
+20
+Baseball bat
+30
