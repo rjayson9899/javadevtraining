@@ -3,9 +3,8 @@ package ProgrammingInJava.chapter9.polymorphism_example;
 import java.util.Scanner;
 
 public class Music {
-    public static Instrument assignInstrument(){
+    public static Instrument assignInstrument(Scanner input){
         String instrumentChoice;
-        Scanner input = new Scanner(System.in);
         String name;
 
         System.out.println("Select an instrument for the band member: ");
@@ -28,9 +27,9 @@ public class Music {
         String performanceChoice;
 
         /* assign Instruments*/
-        bandMember1 = assignInstrument();
-        bandMember2 = assignInstrument();
-        bandMember3 = assignInstrument();
+        bandMember1 = assignInstrument(input);
+        bandMember2 = assignInstrument(input);
+        bandMember3 = assignInstrument(input);
         System.out.println(bandMember1 + " " + bandMember2 + " " + bandMember3 + "\n");
         System.out.print("Would you like to hear a Solo(S), a Duet(D), a Trio(T), or Leave(L)? ");
         performanceChoice = input.nextLine();
