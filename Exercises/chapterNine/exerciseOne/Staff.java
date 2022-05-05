@@ -1,18 +1,18 @@
 package Exercises.chapterNine.exerciseOne;
 
 class Staff extends UEmployee {
-    private String department;
+    private String title;
 
-    public Staff(String name, double salary, String department) {
+    public Staff(String name, double salary, String title) {
         super(name, salary);
-        this.department = department;
+        this.title = title;
+    }
+    
+    public void setTitle(String department) {
+        this.title = department;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public String getDepartment() {
-        return this.department;
+    public String getTitle() {
+        return this.title;
     }
 }

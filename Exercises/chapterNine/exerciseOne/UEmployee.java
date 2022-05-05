@@ -1,5 +1,7 @@
 package Exercises.chapterNine.exerciseOne;
 
+import java.text.NumberFormat;
+
 public class UEmployee {
     private String name;
     private double salary;
@@ -13,7 +15,8 @@ public class UEmployee {
         return this.name;
     }
 
-    public double getSalary() {
-        return this.salary;
+    public String getSalary() {
+        NumberFormat money = NumberFormat.getCurrencyInstance();
+        return money.format(this.salary);
     }
 }
