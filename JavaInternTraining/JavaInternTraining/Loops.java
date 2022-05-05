@@ -1,3 +1,4 @@
+package JavaInternTraining;
 import java.util.Scanner;
 
 public class Loops {

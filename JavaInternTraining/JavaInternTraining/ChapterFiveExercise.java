@@ -1,3 +1,4 @@
+package JavaInternTraining;
 /* 
 This program was developed by Macario Peralta V.
 The following are the review programs that were in 

@@ -1,3 +1,4 @@
+package JavaInternTraining;
 public class ChapterThreeExercise {
 
     public static void runThird(){

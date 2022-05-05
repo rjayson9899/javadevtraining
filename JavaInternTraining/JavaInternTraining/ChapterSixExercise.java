@@ -1,3 +1,4 @@
+package JavaInternTraining;
 /*
  This program was developed by Macario Peralta V.
  The purpose of this program is to help the developer 

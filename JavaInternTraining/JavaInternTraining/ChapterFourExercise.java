@@ -1,3 +1,4 @@
+package JavaInternTraining;
 /*
 This project was developed by Macario Peralta V
 
