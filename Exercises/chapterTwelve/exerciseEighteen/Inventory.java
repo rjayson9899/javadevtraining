@@ -5,40 +5,17 @@ import java.util.Scanner;
 import java.io.*;
 
 public class Inventory {
-    private static void printInventory(ArrayList<Product> catalogue) {
-        System.out.format("%4s\t%20s\t%20s\n", "ID", "Product Name", "Amount in Stock");
-        for (Product item: catalogue) {
-            System.out.format("%4s\t%20s\t%20s\n", item.getID(), item.getName(), item.getStock());
-        }
-    }
-
-    private static int searchInventory(ArrayList<Product> catalogue, int stockID) {
-        int index = 0;
-        int foundID;
-
-        do {
-            foundID = catalogue.get(index).getID();
-            index++;
-        } while ((foundID != stockID) && (index < catalogue.size()));
-
-        if (foundID == stockID) {
-            return (index - 1);
-        }
-        else {
-            return -1;
-        }
-    }
-
     public static void main(String[] args) {
         ArrayList<Product> catalogue = new ArrayList<Product>();
         Scanner in = new Scanner(System.in);
         int oper, amount, stockID, get, index, status;
-        String getName, readText, readName, readStock;
+        String getName, readText, readName, readStock, outputFormat;
         File inventoryRecord = new File(".\\Exercises\\chapterTwelve\\exerciseEighteen\\inventory.txt");
         BufferedWriter write;
 
         do {
             System.out.print("\033[H\033[2J");
+            System.out.flush();
             System.out.println("1. Add product");
             System.out.println("2. Discontinue product");
             System.out.println("3. View Stock");
@@ -161,12 +138,8 @@ public class Inventory {
                             FileWriter out = new FileWriter(inventoryRecord);
                             write = new BufferedWriter(out);
                             for (Product indexInLoop: catalogue) {
-                                /*outputFormat = String.format("%20s\t%20s", indexInLoop.getName(), indexInLoop.getStock());
+                                outputFormat = String.format("%20s\t%20s", indexInLoop.getName().replaceAll(" ", "_"), Integer.toString(indexInLoop.getStock()));
                                 write.write(outputFormat);
-                                write.newLine(); */
-                                write.write(indexInLoop.getName());
-                                write.newLine();
-                                write.write(Integer.toString(indexInLoop.getStock()));
                                 write.newLine();
                             }
                             write.close();
@@ -182,32 +155,41 @@ public class Inventory {
 
 
                 case 7:
-                    try {
-                        FileReader read = new FileReader(inventoryRecord);
-                        BufferedReader getFile = new BufferedReader(read);
-                        catalogue.clear();
-                        while ((readText = getFile.readLine()) != null) {
-                            Scanner check = new Scanner(readText);
-                            stockID = catalogue.size() + 1000;
-                            readName = readText;
-                            readStock = getFile.readLine();
-                            System.out.println(readName + " " + readStock);
-                            catalogue.add(new Product(stockID, Integer.parseInt(readStock), readName));
-                            check.close();
-                        }
-                        getFile.close();
-                        read.close();
-                    }
-                    catch (FileNotFoundException e) {
-                        System.out.println("No file found");
-                        System.out.print("FileNotFoundException: " + e.getMessage() + "\n");
-                    }
-                    catch (IOException e) {
-                        System.out.println("Cannot Access File");
-                        System.out.print("IOException: " + e.getMessage() + "\n");
-                    }
-                    break;
+                    System.out.print("Loading a file will overwrite all current data, press y if you want to continue: ");
+                    getName = in.nextLine();
 
+                    if (getName.equalsIgnoreCase("y")) {
+                        try {
+                            FileReader read = new FileReader(inventoryRecord);
+                            BufferedReader getFile = new BufferedReader(read);
+                            catalogue.clear();
+                            while ((readText = getFile.readLine()) != null) {
+                                Scanner check = new Scanner(readText);
+                                stockID = catalogue.size() + 1000;
+                                readName = check.next();
+                                readName = readName.replaceAll("_", " ");
+                                readStock = check.next();
+                                catalogue.add(new Product(stockID, Integer.parseInt(readStock), readName));
+                                check.close();
+                            }
+                            getFile.close();
+                            read.close();
+                            System.out.println("File read success!");
+                        }
+                        catch (FileNotFoundException e) {
+                            System.out.println("No file found");
+                            System.out.print("FileNotFoundException: " + e.getMessage() + "\n");
+                        }
+                        catch (IOException e) {
+                            System.out.println("Cannot Access File");
+                            System.out.print("IOException: " + e.getMessage() + "\n");
+                        }
+                        break;
+                    }
+                    else {
+                        System.out.println("File reading aborted");
+                    }
+                    
                 case 0:
                     System.out.println("Exiting...");
                     break;
@@ -222,5 +204,42 @@ public class Inventory {
         } while (oper != 0);
 
         in.close();
+    }
+
+    /*
+     * Prints information on all instantiated
+     * Product objects in ArrayList
+     * pre: none
+     * post: Product ID, Name, and Stock quantity printed to terminal
+     */
+    private static void printInventory(ArrayList<Product> catalogue) {
+        System.out.format("%4s\t%20s\t%20s\n", "ID", "Product Name", "Amount in Stock");
+        for (Product item: catalogue) {
+            System.out.format("%4s\t%20s\t%20s\n", item.getID(), item.getName(), item.getStock());
+        }
+    }
+
+    /*
+     * Searches the Product ArrayList for a matching
+     * Stock ID value
+     * pre: none
+     * post: index integer value if a match is found
+     *       -1 if no match is found
+     */
+    private static int searchInventory(ArrayList<Product> catalogue, int stockID) {
+        int index = 0;
+        int foundID;
+
+        do {
+            foundID = catalogue.get(index).getID();
+            index++;
+        } while ((foundID != stockID) && (index < catalogue.size()));
+
+        if (foundID == stockID) {
+            return (index - 1);
+        }
+        else {
+            return -1;
+        }
     }
 }

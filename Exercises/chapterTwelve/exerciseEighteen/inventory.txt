@@ -1,6 +1,3 @@
-Basketball
-10
-Racket
-20
-Baseball bat
-30
+          Basketball	                 100
+              Racket	                  50
+        Baseball_Bat	                  70

@@ -35,12 +35,15 @@ public class CourseGrades {
             ObjectOutputStream writeGrade = new ObjectOutputStream(out);
             writeGrade.writeObject(records);
             writeGrade.close();
+            System.out.println("File saved to gradebook.dat");
         }
         catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Unable to find gradebook.dat file");
+            System.out.println("FileNotFoundException: " + e.getMessage());
         }
         catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error accessing gradebook.dat");
+            System.out.println("IOException: " + e.getMessage());
         }
 
     }

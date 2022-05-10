@@ -14,6 +14,12 @@ public class GradeBook implements Serializable {
         this.grades = new int[STUDENTS][EXAMS];
     }
 
+    /*
+     * Begins a sequence of input requests for
+     * grades to be assigned to student exams
+     * pre: Scanner object
+     * post: Grade values assigned to all array indexes
+     */
     public void getGrades(Scanner in) {
         for(int x = 0; x < STUDENTS; x++) {
             for (int y = 0; y < EXAMS; y++) {
@@ -24,6 +30,13 @@ public class GradeBook implements Serializable {
         }
     }
 
+    /*
+     * Prints all grade values stored in
+     * array. Output is directly shown in
+     * Terminal
+     * pre: none
+     * post: Grade values outputted to terminal
+     */
     public void showGrades() {
         for(int x = 0; x < STUDENTS; x++) {
             System.out.println("Student " + (x + 1) + " grades:");
@@ -35,6 +48,13 @@ public class GradeBook implements Serializable {
         }
     }
 
+    /*
+     * Computes for an individual students
+     * average grade base on all their test
+     * scores
+     * pre: none
+     * post: Student grade average as double
+     */
     public double studentAvg(int student) {
         double testAverage = 0;
 
@@ -47,6 +67,12 @@ public class GradeBook implements Serializable {
         return testAverage;
     }
 
+    /*
+     * Computes for a particular average exam grade
+     * from the scores of all students
+     * pre: none
+     * post: Average exam grade as double
+     */
     public double testAvg(int exam) {
         double studentAverage = 0;
 

@@ -6,9 +6,10 @@ public class GradeBookReader {
     public static void main(String[] args) {
         File recordFile = new File(".\\Exercises\\chapterTwelve\\exerciseSixteen\\gradebook.dat");
         GradeBook records;
+        FileInputStream in;
 
         try {
-            FileInputStream in = new FileInputStream(recordFile);
+            in = new FileInputStream(recordFile);
             ObjectInputStream read = new ObjectInputStream(in);
             records = (GradeBook) read.readObject();
             read.close();
