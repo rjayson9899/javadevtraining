@@ -71,10 +71,17 @@ public class App {
                     break;
 
                 case 3:
-                    System.out.print("Input student number: ");
-                    studentNum = input.nextInt();
-                    System.out.println(book[studentNum].studentAvg(studentNum));
-                    pressAnyKeyToContinue();
+                    try {
+                        System.out.print("Input student number: ");
+                        studentNum = input.nextInt();
+                        System.out.println(book[studentNum - 1].studentAvg(studentNum - 1));
+                        pressAnyKeyToContinue();
+                        
+                    } catch (Exception e) {
+                        System.out.println("Wrong input!");
+                        pressAnyKeyToContinue();
+                    }
+                   
                     break;
 
                 case 4:

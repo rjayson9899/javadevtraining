@@ -29,7 +29,7 @@ public class GradeBook {
     public double studentAvg(int studentNum){
         double average = 0;
         for(int x = 0; x < grades[1].length; x++){
-           average += grades[studentNum - 1][x];
+           average += grades[1][x];
         }
         average = average/grades[1].length;
         return average;
@@ -38,7 +38,7 @@ public class GradeBook {
     public double testAvg(int testAvg){
         double total = 0;
         for(int x = 0; x < grades[1].length; x++){
-            total += grades[testAvg - 1][x]; 
+            total += grades[1][x]; 
         }
         total = total/grades[1].length;
         return total;
