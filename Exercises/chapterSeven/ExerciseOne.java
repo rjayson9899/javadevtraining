@@ -1,6 +1,20 @@
+/*
+ * Made by: Roger Jayson M. Mendez III
+ * On: 4/26/22
+ * The intention of this exercise is to be able to
+ * print a house onto the terminal through the use of
+ * methods. Three methods are presented, one to draw the roof,
+ * one for the base, and one for the pathway.
+ */
 package Exercises.chapterSeven;
 
 public class ExerciseOne {
+    /*
+     * Prints a roof 8 characters wide and 
+     * 4 characters long.
+     * pre: none
+     * post: Prints a roof onto the terminal
+     */
     public static void addRoof() {
         int drawCoord = 3;
         
@@ -29,6 +43,12 @@ public class ExerciseOne {
 
     }
 
+    /*
+     * Prints a house base 8 characters wide and
+     * 4 characters long
+     * pre: none
+     * post: House base printed onto the terminal
+     */
     public static void addBase() {
         for (int y = 0; y < 4; y++) {
             for (int x = 0; x < 8; x++) {
@@ -48,6 +68,14 @@ public class ExerciseOne {
         }
     }
 
+    /*
+     * Prints a walkway 2 characters long for the first line
+     * and 11 characters long for the second line.
+     * pathway has 3 whitespaces for padding to center path with
+     * house.
+     * pre: none
+     * post: House pathway printed onto the terminal.
+     */
     public static void addWalk() {
         System.out.println("   **");
         for (int i = 0; i < 14; i++) {

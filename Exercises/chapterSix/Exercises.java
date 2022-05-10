@@ -1,7 +1,20 @@
+/*
+* Made by: Roger Jayson M. Mendez III
+* Began: 4/22/22
+* Last Modified: 4/25/22 
+* This program contains my answers to the exercises located in
+* Chapter 6 of the Java programming guide
+*/
 package Exercises.chapterSix;
 
 import java.util.Scanner;
 public class Exercises {
+
+    /*
+     * User is asked to input two numbers.
+     * The program will check if the inputs are prime numbers
+     * and will then print whichever number is prime
+     */
     public static void runExerciseOne(Scanner in) {
         boolean[] isPrime = new boolean[2];
         int[] get = new int[2];
@@ -32,6 +45,10 @@ public class Exercises {
         }
     }
 
+    /*
+     * Asks for an input number and
+     * computes for the prime factors
+     */
     public static void runExerciseTwo (Scanner in) {
         int cnt = 2;
         int get;
@@ -51,6 +68,10 @@ public class Exercises {
         } while (get != 1);
     }
 
+    /*
+     * Asks for an integer as input and prints each
+     * digit from highest to lowest place
+     */
     public static void runExerciseFive (Scanner in) {
         int get, length;
         String lengthBuffer;
@@ -69,6 +90,10 @@ public class Exercises {
         }
     }
 
+    /*
+     * Asks for two integer inputs and outputs
+     * and computes for the GCD of the two
+     */
     public static void runExerciseTen (Scanner in) {
         int num1, num2, temp;
 
@@ -86,6 +111,11 @@ public class Exercises {
         System.out.print("The GCD is: " + num1);
     }
 
+    /*
+     * Program will ask for the current time and 
+     * how many hours the user wishes to pass the time.
+     * Will return the final time.
+     */
     public static void runExerciseEleven(Scanner in) {
         int hourIn, hourElapse, hourOut;
         String timeString;
@@ -136,6 +166,10 @@ public class Exercises {
         System.out.println("The time is now " + hourOut + ":00 " + timeString);
     }
 
+    /*
+     * Gets two integer inputs and solves for
+     * the necklace sequence
+     */
     public static void runExcerciseTwelve(Scanner in) {
         int get1, get2, temp1, temp2, res;
 
