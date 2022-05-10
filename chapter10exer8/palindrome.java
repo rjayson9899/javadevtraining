@@ -24,7 +24,6 @@ public class palindrome {
             else{
                 isPalindrome = false;
             }
-            System.out.println(isPalindrome);
             backCount--;
         }
 
