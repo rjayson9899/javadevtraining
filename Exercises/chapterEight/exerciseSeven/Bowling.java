@@ -1,3 +1,15 @@
+/*
+ * Made by: Roger Jayson M. Mendez III
+ * Began: 4/27/22
+ * Last Modified: 5/04/22
+ * This exercises focuses on creating a bowling app that meets specifications listed in 
+ * Ch. 8, pg. 212. To achieve the specifications, three classes were designed, one to
+ * represent the game, one to represent the player, and one to handle the flow of everything.
+ * This file serves as the client code and the one that handles the flow of everything. 
+ * The program is capable of instantiating up to 4 different player objects that will interact
+ * with a singular bowling game object. This program will handle turns, frames, 
+ * and outputting of scores to the terminal.
+ */
 package Exercises.chapterEight.exerciseSeven;
 
 import java.util.Scanner;

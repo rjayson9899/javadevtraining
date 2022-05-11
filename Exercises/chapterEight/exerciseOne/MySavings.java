@@ -1,3 +1,13 @@
+/*
+ * Made by: Roger Jayson M. Mendez III
+ * On: 4/26/22
+ * This exercise provides the oppurtunity to apply the basics of OOP in Java. In this exercise,
+ * the programmer is tasked to design a class that represents a piggy bank. The features of the piggy 
+ * bank will described in its own class file. Once the class file has been designed, it must then be 
+ * instatitated into an object and have its methods accessible to the user. This file will serve as the 
+ * client code of the object and will provide a menu for  which users will be able to interact with the 
+ * piggy bank object.
+ */
 package Exercises.chapterEight.exerciseOne;
 
 import java.util.Scanner;

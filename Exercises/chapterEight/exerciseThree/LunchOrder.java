@@ -1,3 +1,16 @@
+/*
+ * Made by: Roger Jayson M. Mendez III
+ * On: 4/27/22
+ * This exercise aims to create lunch ordering app that accepts
+ * user input on how much of a certain food product they want to
+ * buy. This class file serves as the client code of the exercise.
+ * Four food objects were instantiated with values corresponding to
+ * what is desired in the exercise. The program then asks for how
+ * much of a particular food product does the customer want. After
+ * the customer inputs a specific amount, the program will print the
+ * nutritive facts of the food they ordered. At the end, the program will
+ * tally the final price of all products bought.
+ */
 package Exercises.chapterEight.exerciseThree;
 
 import java.util.Scanner;
