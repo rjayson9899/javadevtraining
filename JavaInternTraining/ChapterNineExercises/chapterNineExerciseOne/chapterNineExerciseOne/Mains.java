@@ -10,7 +10,7 @@ public class Mains {
         Scanner userIn = new Scanner(System.in);
 
         staff sta = new staff("Ykcam", 100000, "Principal");
-        faculty fac = new faculty("Macky", 500000, "Engineering Department");
+        faculty fac = new faculty("Marga", 500000, "Engineering Department");
 
         System.out.println("Hello Good day!");
         System.out.println("Please enter your choice: ");

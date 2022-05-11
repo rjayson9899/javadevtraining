@@ -16,13 +16,13 @@ public class partOne {
         
         /* roll dice and add to outcomes */
         for (int roll = 0; roll < numRolls; roll++) {
-        outcome = (rand.nextInt(6) + 1) + (rand.nextInt(6) + 1) + (rand.nextInt(6) + 1);
-        outcomes[outcome] += 1;
+            outcome = (rand.nextInt(6) + 1) + (rand.nextInt(6) + 1) + (rand.nextInt(6) + 1);
+            outcomes[outcome - 1] += 1;
         }
         
         /* show counts of outcomes */
-        for (int i = 3; i <= 18; i++) {
-        System.out.println(i + ": " + outcomes[i]);
+        for (int i = 0; i < 18; i++) {
+            System.out.println((i + 1) + ": " + outcomes[i]);
         }
         input.close();
     }
