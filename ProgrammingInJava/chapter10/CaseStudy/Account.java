@@ -6,17 +6,23 @@ public class Account {
     private double balance;
     private Customer cust;
     private String acctID;
-    
 
-    public Account(double bal, String firstName, String lastName) {
+    public Account(double bal, String firstName, String lastName, String street, String city, String state, String zip) {
         balance = bal;
-        cust = new Customer(firstName, lastName);
+        cust = new Customer(firstName, lastName, street, city, state, zip);
         acctID = firstName.substring(0,1) + lastName;
+    }
+
+    public void changeAddress(String street, String city, String state, String zip){
+        cust.changeStreet(street);
+        cust.changeCity(city);
+        cust.changeState(state);
+        cust.changeZip(zip);
     }
 
     public Account(String ID) {
         balance = 0;
-        cust = new Customer("", "");
+        cust = new Customer("", "", "", "", "", "" );
         acctID = ID;
     }
 

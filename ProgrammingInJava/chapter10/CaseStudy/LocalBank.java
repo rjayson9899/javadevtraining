@@ -16,6 +16,7 @@ public class LocalBank {
             System.out.println("[C] Check Balance");
             System.out.println("[A] Add an account");
             System.out.println("[R] Remove an account");
+            System.out.println("[M] Modify an account");
             System.out.println("[Q] Quit\n");
             System.out.print("Enter choice: ");
             action = input.nextLine();
@@ -25,7 +26,7 @@ public class LocalBank {
             } 
             else if(!action.equalsIgnoreCase("Q")) {
                 
-                System.out.println("Enter account ID: ");
+                System.out.print("Enter account ID: ");
                 acctID = input.nextLine();
                 
                 if (action.equalsIgnoreCase("D")) {
@@ -42,6 +43,8 @@ public class LocalBank {
                     easySave.checkBalance(acctID);
                 } else if (action.equalsIgnoreCase("R")) {
                     easySave.deleteAccount(acctID);
+                } else if (action.equalsIgnoreCase("M")){
+                    easySave.modifyAccount(acctID);
                 }
             }    
         } while (!action.equalsIgnoreCase("Q"));
