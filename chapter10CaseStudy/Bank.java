@@ -97,20 +97,46 @@ public class Bank {
  * pre: none
  * post: Account information, including balance, has been displayed.
  */
- public void checkBalance(String acctID) {
- int acctIndex;
- Account acctToMatch, acct;
- 
- acctToMatch = new Account(acctID);
- acctIndex = accounts.indexOf(acctToMatch); //retrieve location of account
- if (acctIndex > -1) {
- acct = (Account)accounts.get(acctIndex); //retrieve object to display
- System.out.println(acct);
- } else {
- System.out.println("Account does not exist.");
- }
- }
- 
- 
+    public void checkBalance(String acctID) {
+        int acctIndex;
+        Account acctToMatch, acct;
+        
+        acctToMatch = new Account(acctID);
+        acctIndex = accounts.indexOf(acctToMatch); //retrieve location of account
+        if (acctIndex > -1) {
+        acct = (Account)accounts.get(acctIndex); //retrieve object to display
+        System.out.println(acct);
+        } else {
+        System.out.println("Account does not exist.");
+        }
+    }
+
+    public void modifyAccount(String acctID){
+        int acctIndex;
+        String street, city, state, zip;
+        Account acctToMatch;
+        
+        acctToMatch = new Account(acctID);
+        acctIndex = accounts.indexOf(acctToMatch); //retrieve location of account
+        if (acctIndex > -1) {
+            System.out.print("Enter new street: ");
+            input.nextLine();
+            street = input.nextLine();
+            System.out.print("Enter new city: ");
+            city = input.nextLine();
+            System.out.print("Enter new state: ");
+            state = input.nextLine();
+            System.out.print("Enter new ZIP: ");
+            zip = input.nextLine();
+            accounts.get(acctIndex).changeAddress(street, city, state, zip);
+            System.out.println("Succesfully Edited!");
+
+        } else {
+            System.out.println("Account does not exist.");
+      
+        }
+
+    
+    }
 }
 

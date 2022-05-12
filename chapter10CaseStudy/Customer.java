@@ -30,7 +30,7 @@ public class Customer {
     */
     public String toString() {
     String custString;
-    custString = firstName + " " + lastName + "\n";
+    custString = firstName + " " + lastName + "\n" + "Address: " + street + ", " + city + ", " + state + ", " + zip + "\n" ;
     return(custString);
     }
 

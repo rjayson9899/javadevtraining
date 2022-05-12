@@ -16,7 +16,7 @@ Double amt;
 /* display menu of choices */
 do {
 System.out.println("\nDeposit\\Withdrawal\\Check balance");
-System.out.println("Add an account\\Remove an account");
+System.out.println("Add an account\\Remove an account\\Edit account");
 System.out.println("Quit\n");
 System.out.print("Enter choice: ");
 action = input.next();
@@ -38,7 +38,9 @@ if (action.equalsIgnoreCase("A")) {
     easySave.checkBalance(acctID);
     } else if (action.equalsIgnoreCase("R")) {
     easySave.deleteAccount(acctID);
-    }
+    } else if (action.equalsIgnoreCase("E")) {
+        easySave.modifyAccount(acctID);
+        }
     }
     } while (!action.equalsIgnoreCase("Q"));
     input.close();
